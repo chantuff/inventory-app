@@ -1,18 +1,17 @@
-import React from 'react'
-import styles from './AuthPage.module.css';
+import { useState } from 'react'
+import styles from './AuthPage.module.css'
 import SignUpForm from '../../components/SignUpForm'
 import LoginForm from '../../components/LoginForm'
-import { useState } from 'react';
+// import Logo from '../../components/Logo/Logo'
 
 function AuthPage(props) {
-  const [showLogin, setShowLogin] = useState(true);
+  const [ showLogin, setShowLogin ] = useState(true);
 
   return (
-    <main className={styles.AuthPage}>
-    <h3 onClick={() => setShowLogin(!showLogin)}>{showLogin ? 'SIGN UP' : 'LOG IN'}</h3>
-    <SignUpForm setUser={props.setUser}/>
-    <LoginForm setUser={props.setUser} />
-    </main>
+    <main className={styles.AuthPage} >
+            <h3 onClick={() => setShowLogin(!showLogin)}>{showLogin ? 'SIGN UP' : 'LOG IN'}</h3>
+    { showLogin ? <LoginForm setUser={props.setUser} /> : <SignUpForm setUser={props.setUser}/>}
+    </ main>
   )
 }
 
