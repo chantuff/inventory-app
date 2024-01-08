@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 
 const SALT_ROUNDS = 6;
 
-const userSchema = new Schema({
+const usersSchema = new Schema({
     name: {type: String, required: true},
     email: {
         type: String,
@@ -29,7 +29,7 @@ const userSchema = new Schema({
     }
 });
 
-userSchema.pre('save', async function (next) {
+usersSchema.pre('save', async function (next) {
     // 'this' is the user doc
     if (!this.isModified('password')) return next();
     // update the password with the computed hash
@@ -37,4 +37,4 @@ userSchema.pre('save', async function (next) {
     return next();
 });
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('Users', usersSchema);

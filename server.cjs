@@ -37,7 +37,16 @@ app.get('/api/test', (req, res) => {
     res.send('You just hit a API route');
   });
 
+
+
+// Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users.cjs'));
+// Protect the API routes below from anonymous users
+const ensureLoggedIn = require('./config/ensureLoggedIn.cjs');
+app.use('/api/items', ensureLoggedIn, require('./routes/api/items.cjs'));
+app.use('/api/orders', ensureLoggedIn, require('./routes/api/orders.cjs'));
+
+
 // we have included the line 
 // const userRouter = require('./routes/api/users.cjs')
 // app.use('/api/user', userRouter);
@@ -48,6 +57,7 @@ app.get('/*', function(req, res) {
     res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 
 });
+
 
 
 app.listen(PORT, function () {
