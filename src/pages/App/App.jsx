@@ -12,12 +12,12 @@ import styles from './App.module.css';
 //
 // import pages
 import AuthPage from '../AuthPage/AuthPage';
-import NewOrderPage from '../NewOrderPage';
-import OrderHistoryPage from '../OrderHistoryPage';
+import NewOrderPage from '../NewOrderPage/NewOrderPage.jsx';
+import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import { Navigate } from 'react-router-dom';
 
 // import components
-import NavBar from '../../components/NavBar';
+import NavBar from '../../components/NavBar/NavBar.jsx';
 
 function App() {
   const [user, setUser] = useState(getUser());
