@@ -1,4 +1,4 @@
-.AuthPage {
+/* .AuthPage {
   height: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -16,4 +16,14 @@
   padding: 3vmin;
   border: 0.1vmin solid var(--tan-3);
   border-radius: 1vmin;
-}
+} */
+
+
+/* .container
+{
+  position: relative;
+  width: 800px;
+  height: 400px;
+  background: rgba(0, 0, 0,0.125);
+} */
+
