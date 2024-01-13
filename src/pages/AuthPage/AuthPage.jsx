@@ -10,7 +10,7 @@ function AuthPage(props) {
 
   return (
     <main className={styles.AuthPage} >
-            <h3 onClick={() => setShowLogin(!showLogin)}>{showLogin ? 'SIGN UP' : 'LOG IN'}</h3>
+            <h3 onClick={() => setShowLogin(!showLogin)}>{showLogin ? 'No account, SIGN UP here!' : 'LOG IN'}</h3>
     { showLogin ? <LoginForm setUser={props.setUser} /> : <SignUpForm setUser={props.setUser}/>}
     </ main>
   )
