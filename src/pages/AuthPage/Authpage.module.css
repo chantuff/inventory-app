@@ -1,4 +1,4 @@
-/* .AuthPage {
+.AuthPage {
   height: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -10,20 +10,6 @@
 .AuthPage h3 {
   margin-top: 4vmin;
   text-align: center;
-  color: var(--white);
+  color: var(--text-light);
   cursor: pointer;
-  background-color: var(--tan-4);
-  padding: 3vmin;
-  border: 0.1vmin solid var(--tan-3);
-  border-radius: 1vmin;
-} */
-
-
- .AuthPage 
-{
-  position: relative;
-  width: 800px;
-  height: 400px;
-  background: rgba(0, 0, 0,0.125);
-} 
-
+}
