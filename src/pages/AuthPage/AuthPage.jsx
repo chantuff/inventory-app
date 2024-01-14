@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import styles from './AuthPage.module.css'
 import SignUpForm from '../../components/SignUpForm/SignUpForm'
-// import LoginForm from '../../components/LoginForm'
-import LoginForm from '../../components/LoginForm/LoginForm'
+import LoginForm from '../../components/LogInForm/LogInForm';
 // import Logo from '../../components/Logo/Logo'
 
 function AuthPage(props) {
